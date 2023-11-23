@@ -11,7 +11,7 @@ jobs:
     uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@qmk-userspace
     with:
       qmk_repo: qmk/qmk_firmware
-      qmk_ref: master
+      qmk_ref: qmk-userspace
 
   publish:
     name: 'QMK Userspace Publish'
