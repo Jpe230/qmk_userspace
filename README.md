@@ -1,6 +1,17 @@
-# QMK Userspace
+# QMK Userspace Jpe230sKeebs
 
-This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the main QMK repository.
+My repo for my keymaps/keyboards
+
+Keymaps in this repo:
+- Adafruit Macropad
+- CRKBD (RP2040)
+- Keychron Q2 (playground and upstream)
+- Keychron K14
+- Nullbits Tidbit
+
+Keyboards in this repo:
+- Handwired Big Key Macropad
+- Handwired-ish Dumpad
 
 ## Howto configure your build targets
 
