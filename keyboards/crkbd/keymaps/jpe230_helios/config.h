@@ -14,7 +14,7 @@
  * ---------------------------
  */
 #define OLED_TIMEOUT 0
-#define CUSTOM_OLED_TIMEOUT 10000
+#define CUSTOM_OLED_TIMEOUT 50000
 
 /* ---------------------------
  * Common Bootmagic Lite
@@ -23,16 +23,6 @@
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
 
-/* ---------------------------
- * Common RGB Configuration
- * ---------------------------
- */
-#define RGB_DISABLE_WHEN_USB_SUSPENDED
-#define RGB_DISABLE_TIMEOUT CUSTOM_OLED_TIMEOUT
-#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 128
-#define RGB_MATRIX_DEFAULT_HUE 215
-#define RGB_MATRIX_DEFAULT_SAT 255
-#define RGB_MATRIX_DEFAULT_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 
 /* ---------------------------
  * Common other Configuration
@@ -40,8 +30,25 @@
  */
 #define ENABLE_COMPILE_KEYCODE
 
-#if defined CONVERT_TO_KB2040 || defined CONVERT_TO_PROMICRO_RP2040
-#    include "config_rp2040.h"
-#else
-#    include "config_avr.h"
-#endif
+
+/* ---------------------------
+ * RP2040 OLED Configuration
+ * ---------------------------
+ */
+// #define I2C1_CLOCK_SPEED 400000
+// #define OLED_UPDATE_INTERVAL 1
+// #define OLED_I2C_TIMEOUT 1
+#define OLED_DISPLAY_64X128
+
+/* ---------------------------
+ * RP2040 Split Configuration
+ * ---------------------------
+ */
+#define SPLIT_WPM_ENABLE
+
+/* ---------------------------
+ * RP2040 Debounce
+ * ---------------------------
+ */
+#undef DEBOUNCE
+#define DEBOUNCE 5
